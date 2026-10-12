@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff8f7">
+  <title>Pour Christie ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Bouton de contrôle de la musique -->
+<button class="music-toggle" id="musicToggle"
+        aria-label="Activer la musique" aria-pressed="false">
+    <span class="music-icon">♫</span>
+    <span class="music-label">Musique</span>
+</button>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <span class="monogram">C<span>♡</span></span>
+    <span class="top-label">UNE ATTENTION POUR TOI</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="line"></span> UN JOUR PARTICULIER <span class="line"></span></div>
+      <h1>Joyeux anniversaire,<br><em>Christie.</em></h1>
+      <p class="intro">Aujourd'hui, le monde mérite de prendre une petite pause<br class="desktop"> pour célébrer la belle personne que tu es.</p>
+      <button class="primary-button" id="discoverBtn">Découvrir ton petit cadeau <span>↗</span></button>
+      <div class="hero-photo-wrap">
+        <div class="photo-frame">
+          <img src="assets/christie-portrait-2.jpeg" alt="Portrait de Christie">
+        </div>
+        <span class="photo-note">juste pour toi <span>♡</span></span>
+        <span class="sparkle sparkle-a">✦</span>
+        <span class="sparkle sparkle-b">✧</span>
+      </div>
+      <div class="scroll-note">FAIT AVEC ATTENTION <span>·</span> POUR CHRISTIE</div>
+    </section>
+
+    <section class="message-section" id="message">
+      <div class="section-kicker">QUELQUES MOTS POUR TOI</div>
+      <div class="message-card">
+  <div class="quote-mark">“</div>
+
+  <h2>Une personne spéciale,<br>
+      <em>un jour spécial.</em>
+  </h2>
+
+  <p>
+    Aujourd'hui est un jour spécial, car il célèbre
+    la naissance d'une personne qui mérite de belles choses.
+  </p>
+
+  <p>
+    Christie, je ne sais pas ce que cette nouvelle année
+    de ta vie te réserve, mais je te souhaite des sourires
+    sincères, des rêves qui deviennent réalité et des moments
+    qui réchauffent le cœur.
+  </p>
+
+  <p>
+    Parfois, certaines rencontres ont quelque chose de particulier.
+    Elles arrivent simplement, sans prévenir, et nous donnent
+    envie d'en découvrir davantage sur une personne.
+  </p>
+
+  <p>
+    Pour ton anniversaire, je voulais simplement t'offrir
+    une petite attention différente, quelque chose que tu
+    pourras garder comme un joli souvenir.
+  </p>
+
+  <p>
+    Continue de sourire, de briller et de rester toi-même.
+  </p>
+
+  <p class="closing">
+    Joyeux anniversaire, Christie.
+    Que cette nouvelle année t'apporte autant de beauté
+    que celle que tu peux apporter autour de toi.
+    <span>♡</span>
+  </p>
+</div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="section-kicker">UN PETIT INSTANT DE BEAUTÉ</div>
+      <h2>Reste <em>toi-même.</em></h2>
+      <div class="gallery">
+        <figure class="gallery-main"><img src="assets/christie-portrait-1.jpeg" alt="Christie assise, vêtue de rose"><figcaption>Ta douceur, ta lumière.</figcaption></figure>
+        <div class="gallery-side">
+          <div class="tiny-star">✧</div>
+          <p>Les plus belles choses ne font pas toujours de bruit. Parfois, elles se remarquent simplement.</p>
+          <div class="signature">Pour Christie <span>♡</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gift-section">
+      <div class="gift-orbit">✦</div>
+      <div class="section-kicker">IL RESTE UNE PETITE SURPRISE</div>
+      <h2>Un dernier mot<br><em>pour toi…</em></h2>
+      <p>Appuie sur le cadeau pour découvrir ton dernier message.</p>
+      <button class="gift-button" id="giftBtn" aria-label="Ouvrir le cadeau"><span class="gift-bow">✧</span><span class="gift-box">🎁</span></button>
+      <div class="reveal-message" id="revealMessage" aria-live="polite">
+        <h3>Que la vie te gâte, Christie. ✨</h3>
+        <p>Que cette année t'apporte de belles rencontres, des rêves qui avancent et des souvenirs qui font sourire longtemps. Joyeux anniversaire !</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-heart">♡</div>
+    <p>Une petite attention, pensée spécialement pour toi.</p>
+    <span>JOYEUX ANNIVERSAIRE CHRISTIE</span><br><br>
+    <p>Réalisé par Kiran-Dev</p>
+  </footer>
+  <audio id="birthdayMusic" loop preload="none">
+    <source src="assets/piano-romantique.mp3" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>

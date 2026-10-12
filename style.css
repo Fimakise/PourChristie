@@ -1,0 +1,59 @@
+*{box-sizing:border-box}
+:root{--ink:#35272c;--muted:#88777d;--rose:#bd7f91;--rose-dark:#95566b;--paper:#fffaf9;--gold:#c6a36a}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+.ambient{position:absolute;pointer-events:none;border-radius:50%;filter:blur(2px);opacity:.45}
+.ambient-one{width:260px;height:260px;background:#f5dce2;top:130px;left:-150px}
+.ambient-two{width:220px;height:220px;background:#f4e8d5;top:700px;right:-140px}
+.topbar{height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 8%;border-bottom:1px solid #eadfe0;position:relative;z-index:2}
+.monogram{font-family:"Playfair Display",serif;font-size:29px;font-weight:600}.monogram span{font-size:15px;color:var(--rose);vertical-align:top;margin-left:2px}
+.top-label,.scroll-note,footer>span{font-size:9px;letter-spacing:2.2px;color:var(--muted)}
+.hero{text-align:center;padding:68px 20px 58px;position:relative}
+.eyebrow,.section-kicker{font-size:10px;letter-spacing:2.5px;color:var(--rose-dark);display:flex;align-items:center;justify-content:center;gap:12px}
+.line{height:1px;width:28px;background:#d8b4be}
+h1,h2,h3{font-family:"Playfair Display",serif;font-weight:500}
+h1{font-size:clamp(42px,7vw,78px);line-height:1.08;letter-spacing:-1.7px;margin:24px 0 18px}
+h1 em,h2 em{color:var(--rose);font-weight:500}
+.intro{font-size:14px;line-height:1.9;color:var(--muted);margin:0 auto 26px}
+.primary-button{border:0;background:var(--ink);color:white;padding:15px 21px;font:500 11px "DM Sans",sans-serif;letter-spacing:.3px;cursor:pointer;transition:.25s}
+.primary-button span{margin-left:17px;color:#f0c8d4}.primary-button:hover{background:var(--rose-dark);transform:translateY(-2px)}
+.hero-photo-wrap{width:min(360px,78vw);margin:52px auto 30px;position:relative}
+.photo-frame{padding:10px;background:#fff;box-shadow:0 15px 45px #5a303014;transform:rotate(-2deg);border:1px solid #f0e4e5}
+.photo-frame img{display:block;width:100%;height:390px;object-fit:cover;object-position:center 30%}
+.photo-note{position:absolute;right:-37px;bottom:28px;background:#fff8f5;padding:12px 15px;font:italic 15px "Playfair Display",serif;box-shadow:0 8px 20px #5a303014;transform:rotate(4deg)}
+.photo-note span,.closing span,.signature span{color:var(--rose)}
+.sparkle{position:absolute;color:var(--gold);font-size:28px}.sparkle-a{top:35px;left:-25px}.sparkle-b{bottom:70px;left:-35px;font-size:36px}
+.scroll-note{margin-top:34px;font-size:8px}.scroll-note span{padding:0 8px;color:var(--gold)}
+.message-section{padding:88px 20px 82px;background:#f8eeef;position:relative}
+.message-card{max-width:690px;margin:28px auto 0;text-align:center;padding:45px clamp(22px,6vw,65px);background:#fffdfc;border:1px solid #ead8dc;position:relative;box-shadow:0 18px 50px #60384508}
+.quote-mark{font:70px "Playfair Display",serif;color:#e6c5ce;line-height:.8}
+.message-card h2{font-size:clamp(28px,4vw,43px);line-height:1.25;margin:15px 0 23px}
+.message-card p{font-size:13px;line-height:2;color:#77686d;max-width:520px;margin:0 auto 14px}
+.message-card .closing{font-family:"Playfair Display",serif;font-style:italic;color:var(--ink);margin-top:24px}
+.gallery-section{max-width:940px;margin:0 auto;padding:88px 25px 95px;text-align:center}
+.gallery-section h2{font-size:clamp(33px,5vw,48px);margin:17px 0 35px}
+.gallery{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;text-align:left}
+.gallery-main{margin:0;background:#fff;padding:10px 10px 18px;box-shadow:0 16px 42px #3d24220d;transform:rotate(-1deg)}
+.gallery-main img{display:block;width:100%;height:390px;object-fit:cover;object-position:center 28%}
+.gallery-main figcaption{text-align:center;font:italic 16px "Playfair Display",serif;padding-top:14px;color:#8e6d78}
+.gallery-side{padding:25px 15px}.tiny-star{font-size:40px;color:var(--gold)}.gallery-side p{font:italic 25px/1.55 "Playfair Display",serif;color:#69565e}
+.signature{font:italic 17px "Playfair Display",serif;border-top:1px solid #e9dadd;padding-top:18px;margin-top:28px}
+.gift-section{text-align:center;padding:83px 20px 88px;background:#f8eeef;position:relative;overflow:hidden}
+.gift-section h2{font-size:clamp(38px,5vw,55px);line-height:1.13;margin:20px 0 15px}
+.gift-section>p{font-size:13px;color:var(--muted)}
+.gift-orbit{position:absolute;right:15%;top:60px;color:#d4b77f;font-size:28px}
+.gift-button{margin:22px auto 0;border:1px solid #e4c6ce;background:#fff9f8;width:94px;height:94px;border-radius:50%;cursor:pointer;box-shadow:0 8px 25px #8e536015;transition:.3s;position:relative}
+.gift-button:hover{transform:scale(1.07) rotate(-4deg)}.gift-box{font-size:42px}.gift-bow{position:absolute;top:6px;right:13px;color:var(--gold);font-size:20px}
+.reveal-message{display:none;max-width:480px;margin:28px auto 0;padding:23px 28px;background:#fffdfc;border:1px solid #ead8dc;animation:appear .6s ease}
+.reveal-message.show{display:block}.reveal-message h3{font-size:25px;margin:0 0 10px}.reveal-message p{font-size:13px;line-height:1.8;color:var(--muted);margin:0}
+footer{text-align:center;padding:34px 20px 40px}
+.footer-heart{font-size:28px;color:var(--rose)}footer p{font:italic 16px "Playfair Display",serif;color:#75646b}footer>span{font-size:8px}
+@keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:620px){.topbar{height:66px;padding:0 6%}.top-label{font-size:8px;letter-spacing:1.5px}.hero{padding-top:52px}.intro{font-size:13px}.desktop{display:none}.photo-frame img{height:350px}.photo-note{right:-12px}.message-section{padding:65px 15px}.message-card{padding:32px 20px}.gallery-section{padding:65px 20px}.gallery{grid-template-columns:1fr;gap:15px}.gallery-main img{height:360px}.gallery-side{padding:10px 12px;text-align:center}.gallery-side p{font-size:23px}.gift-section{padding:65px 20px}.gift-orbit{right:8%;top:28px}}
+
+.music-toggle{position:fixed;right:18px;bottom:18px;z-index:10;display:flex;align-items:center;gap:9px;border:1px solid #e6cdd3;border-radius:999px;background:#fffdfb;color:#684b56;padding:11px 15px;box-shadow:0 8px 28px #482b3515;font:500 11px "DM Sans",sans-serif;cursor:pointer;transition:.25s}
+.music-toggle:hover{transform:translateY(-2px);background:#fff5f6}
+.music-icon{font-size:18px;color:var(--rose-dark);line-height:1}
+.music-toggle.is-playing .music-icon{animation:musicPulse 1s ease-in-out infinite alternate}
+@keyframes musicPulse{from{transform:scale(1)}to{transform:scale(1.22)}}
+@media(max-width:620px){.music-toggle{right:12px;bottom:12px;padding:10px 12px}.music-label{font-size:10px}}
