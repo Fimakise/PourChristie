@@ -28,23 +28,20 @@ if (musicToggle && birthdayMusic) {
     if (birthdayMusic.paused) {
       try {
         await birthdayMusic.play();
-
         musicToggle.classList.add("is-playing");
         musicToggle.setAttribute("aria-pressed", "true");
         musicToggle.setAttribute("aria-label", "Couper la musique");
-        musicToggle.querySelector(".music-label").textContent = "Musique activée";
-
+        musicToggle.querySelector(".music-label").textContent = "Couper la musique";
       } catch (error) {
         console.error("Erreur de lecture audio :", error);
         musicToggle.querySelector(".music-label").textContent = "Vérifie le MP3";
       }
     } else {
       birthdayMusic.pause();
-
       musicToggle.classList.remove("is-playing");
       musicToggle.setAttribute("aria-pressed", "false");
       musicToggle.setAttribute("aria-label", "Activer la musique");
-      musicToggle.querySelector(".music-label").textContent = "Musique";
+      musicToggle.querySelector(".music-label").textContent = "Écouter la musique";
     }
   });
 }

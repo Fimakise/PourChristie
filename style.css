@@ -51,9 +51,67 @@ footer{text-align:center;padding:34px 20px 40px}
 @keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:620px){.topbar{height:66px;padding:0 6%}.top-label{font-size:8px;letter-spacing:1.5px}.hero{padding-top:52px}.intro{font-size:13px}.desktop{display:none}.photo-frame img{height:350px}.photo-note{right:-12px}.message-section{padding:65px 15px}.message-card{padding:32px 20px}.gallery-section{padding:65px 20px}.gallery{grid-template-columns:1fr;gap:15px}.gallery-main img{height:360px}.gallery-side{padding:10px 12px;text-align:center}.gallery-side p{font-size:23px}.gift-section{padding:65px 20px}.gift-orbit{right:8%;top:28px}}
 
-.music-toggle{position:fixed;right:18px;bottom:18px;z-index:10;display:flex;align-items:center;gap:9px;border:1px solid #e6cdd3;border-radius:999px;background:#fffdfb;color:#684b56;padding:11px 15px;box-shadow:0 8px 28px #482b3515;font:500 11px "DM Sans",sans-serif;cursor:pointer;transition:.25s}
-.music-toggle:hover{transform:translateY(-2px);background:#fff5f6}
-.music-icon{font-size:18px;color:var(--rose-dark);line-height:1}
-.music-toggle.is-playing .music-icon{animation:musicPulse 1s ease-in-out infinite alternate}
-@keyframes musicPulse{from{transform:scale(1)}to{transform:scale(1.22)}}
-@media(max-width:620px){.music-toggle{right:12px;bottom:12px;padding:10px 12px}.music-label{font-size:10px}}
+/* ===== BOUTON MUSIQUE TRÈS VISIBLE EN HAUT ===== */
+.music-toggle{
+  position:fixed;
+  top:18px;
+  right:18px;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 22px;
+  border:none;
+  border-radius:999px;
+  background:linear-gradient(135deg,#ff8fa3,#ff5c8a);
+  color:#fff;
+  font:600 13px "DM Sans",sans-serif;
+  letter-spacing:.4px;
+  cursor:pointer;
+  box-shadow:0 10px 28px rgba(255,92,138,.5),
+             0 0 0 0 rgba(255,92,138,.7);
+  animation:pulseMusic 2s infinite;
+  transition:transform .25s ease;
+}
+
+.music-toggle:hover{
+  transform:translateY(-2px) scale(1.05);
+  box-shadow:0 14px 32px rgba(255,92,138,.65);
+}
+
+.music-icon{
+  font-size:20px;
+  display:inline-block;
+  animation:spinNote 2.5s ease-in-out infinite;
+}
+
+.music-label{white-space:nowrap}
+
+/* Pulsation pour attirer l'œil */
+@keyframes pulseMusic{
+  0%  {box-shadow:0 10px 28px rgba(255,92,138,.5),0 0 0 0 rgba(255,92,138,.7)}
+  70% {box-shadow:0 10px 28px rgba(255,92,138,.5),0 0 0 18px rgba(255,92,138,0)}
+  100%{box-shadow:0 10px 28px rgba(255,92,138,.5),0 0 0 0 rgba(255,92,138,0)}
+}
+
+@keyframes spinNote{
+  0%,100%{transform:rotate(-10deg)}
+  50%    {transform:rotate(10deg)}
+}
+
+/* État en lecture : vert */
+.music-toggle.is-playing{
+  background:linear-gradient(135deg,#6ee7b7,#10b981);
+  box-shadow:0 10px 28px rgba(16,185,129,.5);
+  animation:none;
+}
+
+/* Mobile */
+@media(max-width:620px){
+  .music-toggle{
+    top:12px;
+    right:12px;
+    padding:11px 16px;
+    font-size:12px;
+  }
+}
